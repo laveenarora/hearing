@@ -1,0 +1,80 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+
+<div class="subject_layer_1 container-fluid">
+        <div class="col-sm-12 sub_elements_of_subjects">
+            {% if class_name == "not known": %}
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">Select Canto</span>
+            {% elif chapter_name == "not known": %}
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">Canto Name - "{{ chapter_list['Name'] }}"</span>
+            {% else: %}
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">Chapter Name - "{{ slokas_list['Name'] }}"</span>
+            {% endif %}
+        </div>
+</div>
+
+
+  <!-- Main Content -->
+
+    <div class="subject_main_area container-fluid">
+        {% if class_name == "not known": %}
+
+        <form action="{{url_for ('subject', id='{{ keys }}' )}}" method="post">
+            <div class="row">
+                {% for keys, value in classes_list.items(): %}
+
+<!--                <form action="{{url_for ('subject', id='{{ keys }}' )}}" method="post">-->
+
+                        <button type="submit" class="btn btn-warning col-lg-4 col-md-6 col-sm-12 ncert_chapter_names" name="class_name" value="{{ keys }}">{{ keys }}</button>
+
+
+                {% endfor %}
+            </div>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <input type="hidden" name="subject_name" value="{{ subject_name }}" />
+            <input type="hidden" name="chapter_name" value="None" />
+            <input type="hidden" name="text_number" value="None" />
+        </form>
+        {% elif chapter_name == "not known": %}
+
+        <form action="{{url_for ('subject', id='{{ keys }}' )}}" method="post">
+            <div class="row">
+
+                {% for chapter in chapter_list['Chapters']: %}
+
+                    <button type="submit" class="btn btn-warning col-lg-4 col-md-6 col-sm-12 ncert_chapter_names" name="chapter_name" value="{{ chapter }}">Ch {{ chapter }} ({{ chapter_list['Chapters'][chapter]['Name'] }})</button>
+
+
+                {% endfor %}
+            </div>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <input type="hidden" name="subject_name" value="{{ subject_name }}" />
+            <input type="hidden" name="class_name" value="{{ class_name }}" />
+            <input type="hidden" name="text_number" value="None" />
+        </form>
+
+       {% else: %}
+
+        <form action="{{url_for ('subject', id='{{ keys }}' )}}" method="post">
+            <div class="row">
+
+                {% for sloka_number in slokas_list['Slokas']: %}
+
+                    <button type="submit" class="btn btn-warning col-lg-4 col-md-6 col-sm-12 ncert_chapter_names" name="text_number" value="{{ sloka_number }}">Text {{ sloka_number }}</button>
+
+
+                {% endfor %}
+            </div>
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+            <input type="hidden" name="subject_name" value="{{ subject_name }}" />
+            <input type="hidden" name="class_name" value="{{ class_name }}" />
+            <input type="hidden" name="chapter_name" value="{{ chapter_name }}" />
+        </form>
+
+        {% endif %}
+
+    </div>
+<!--  <hr>-->
+
+{% include "footer.html" %}

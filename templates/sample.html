@@ -1,0 +1,55 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+
+<div class="subject_layer_1 container-fluid">
+        <div class="col-sm-12 sub_elements_of_subjects">
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">Sample Question</span>
+        </div>
+</div>
+
+  <!-- Main Content -->
+<div class="container-fluid">
+
+
+</div>
+
+    <div class="subject_main_area container-fluid">
+
+        <div id="test">
+        {% autoescape false %}
+
+                <h3> <pre id="not-overflow">{{ qstn["text"] }}</pre></h3>
+
+        {% endautoescape %}
+
+        <hr>
+
+
+             <h4 style="color: #FFF5C2">{{ qstn["shuffled_options"][0] }}</h4>
+             <h4 style="color: #FFF5C2">{{ qstn["shuffled_options"][1] }}</h4>
+             <h4 style="color: #FFF5C2">{{ qstn["shuffled_options"][2] }}</h4>
+             <h4 style="color: #FFF5C2">{{ qstn["shuffled_options"][3] }}</h4>
+
+            <div class="row question_buttons">
+                <div class="col-sm">
+                    <form action="{{url_for ('sample')}}" method="post">
+                        <button type="submit" class="btn btn-outline-light rounded">Solution</button>
+                    </form>
+                </div>
+                <div class="col-sm">
+                    <form action="{{url_for ('sample')}}" method="post">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        <input type="hidden" name="subject_name" value="{{ subject_name }}" />
+                        <input type="hidden" name="class_name" value="{{ class_name }}" />
+                        <input type="hidden" name="chapter_name" value="{{ chapter_name }}" />
+                        <button type="submit" class="btn btn-outline-warning rounded">NEXT</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!--  <hr>-->
+
+{% include "footer.html" %}

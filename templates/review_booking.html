@@ -1,0 +1,64 @@
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static', filename='img/hotel-bg.jpeg')}})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="page-heading">
+            <h1>Hotels</h1>
+            <span class="subheading">Review Your Booking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+        {% if bookings: %}
+
+                <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Date of Booking</th>
+                          <th>Name</th>
+                          <th>Description of Room/Hall</th>
+                          <th>Room Booked</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        {% for booking in bookings: %}
+
+                             <tr>
+                                <td>{{ booking.date_time[:10] }}</td>
+                                <td>{{ booking.hotel }}</td>
+                                <td>{{ booking.description }}</td>
+                                <td>{{ booking.number_of_room_booked }}</td>
+                                 <td>{{ booking.status }}</td>
+                             </tr>
+                        {% endfor %}
+                      </tbody>
+                </table>
+        {% else: %}
+
+            <p>You have not made any booking</p>
+
+         {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <hr>
+{% include "footer.html" %}
+{% endblock %}

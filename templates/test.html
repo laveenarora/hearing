@@ -1,0 +1,59 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+
+<div class="subject_layer_1 container-fluid">
+        <div class="col-sm-12 sub_elements_of_subjects">
+                <span style ="background-color: #F6E1C3" class="ncert_sub_category_buttons">{{ chapter_name }} QUIZ</span>
+        </div>
+</div>
+
+  <!-- Main Content -->
+<div class="container-fluid">
+
+
+</div>
+
+    <div class="subject_main_area container-fluid">
+
+        <div id="test">
+        {% autoescape false %}
+
+                <h3> <pre id="not-overflow">Q. {{ qstn_number }} {{ qstn["text"] }}</pre></h3>
+
+        {% endautoescape %}
+
+        <hr>
+
+        <form action="{{url_for ('test')}}" method="post">
+
+             <h4 style="color: #FFF5C2"><input type="radio" id="optionA" name="optionSelected" value="{{ qstn['shuffled_options'][0] }}" >  {{ qstn["shuffled_options"][0] }}</h4>
+             <h4 style="color: #FFF5C2"><input type="radio" id="optionB" name="optionSelected" value="{{ qstn['shuffled_options'][1] }}" >  {{ qstn["shuffled_options"][1] }}</h4>
+             <h4 style="color: #FFF5C2"><input type="radio" id="optionC" name="optionSelected" value="{{ qstn['shuffled_options'][2] }}" >  {{ qstn["shuffled_options"][2] }}</h4>
+             <h4 style="color: #FFF5C2"><input type="radio" id="optionD" name="optionSelected" value="{{ qstn['shuffled_options'][3] }}" >  {{ qstn["shuffled_options"][3] }}</h4>
+
+            <div class="row question_buttons">
+                <div class="col-sm">
+
+                        <button type="submit" class="btn btn-info rounded">Prev</button>
+                </div>
+
+                <div class="col-sm">
+
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                        <input type="hidden" name="qstn_details" value="{{ qstn_details }}" />
+                        <input type="hidden" name="qstn" value="{{ qstn }}" />
+                        <input type="hidden" name="subject_name" value="{{ subject_name }}" />
+                        <input type="hidden" name="class_name" value="{{ class_name }}" />
+                        <input type="hidden" name="chapter_name" value="{{ chapter_name }}" />
+                        <input type="hidden" name="qstn_number" value="{{ qstn_number }}" />
+                        <button type="submit" class="btn btn-warning rounded">Next</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!--  <hr>-->
+
+{% include "footer.html" %}

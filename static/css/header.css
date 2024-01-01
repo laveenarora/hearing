@@ -1,0 +1,18 @@
+/* Navigation width Color */
+.navigation {
+    background-color: #97f895;
+  }
+
+.same_line {
+    float:left;
+}
+
+.overfloww {
+    color: red;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}

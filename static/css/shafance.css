@@ -1,0 +1,492 @@
+
+body, html {
+      height: 100%;
+}
+
+.same_line {
+    float:left;
+}
+
+@media (min-width: 768px) {
+      .left-margin {
+        margin-left: 15%;
+      }
+      .right-margin {
+        margin-right: 15%;
+      }
+    }
+
+#not-overflow {
+    color: white;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.qstn_test {
+    text-align: center;
+}
+
+/* ------------------Navigation Bar - Header--------------------*/
+
+/* Color of right side letters */
+.nav-item a {
+  font-size: 1.25em;
+  color: #3F0071 ;
+}
+
+/* Logo image size */
+.shafance {
+  width: 15%;
+  height: 15%;
+}
+
+/* Navigation width Color */
+.navigation {
+  background-color: #FFFFEC;
+}
+
+/* Navbar Username */
+.nav_username {
+  color: #205E61;
+  font-family: "Merriweather";
+  padding: 10px 0px;
+  text-align: right;
+}
+
+/* Dropdown Menu */
+.drop_down_menu {
+  background-color: #F3DEBA;
+}
+
+.drop_down_menu hr {
+  padding: 0% 0%;
+  margin: 0% 0%;
+  width: auto;
+  color: #3F0071;
+}
+
+/* ------------------ Home Page --------------------*/
+
+/* Carousel Main Container Element */
+.carousel_container {
+  background-color: #F1E4C3;
+  padding: 5% 15%;
+  text-align: center;
+}
+
+/* Carousel Element */
+.carousel_slides {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 50%;
+  padding-bottom: 0%;
+}
+
+/* Carousel left button Padding */
+.carousel_prev_icon {
+  padding-right: 10%;
+}
+
+/* Carousel Right button Padding */
+.carousel_next_icon {
+  padding-left: 10%;
+}
+
+/* About Us Main Section */
+.about_us {
+  padding: 5% 15%;
+  text-align: centre;
+  background-color: #C6A969;
+}
+
+/* About Us Image element */
+.about_us img {
+  border-radius: 100%;
+}
+
+/* About Us section H3 heading */
+.about_us h3 {
+  font-family: 'Shantell Sans';
+  color: white;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* About Us section Paragraph */
+.about_us p {
+  color: rgb(191, 239, 101);
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Vision & Motto section Main element */
+.vision {
+  padding: 5% 15%;
+  text-align: centre;
+  background-color: #C6A969;
+}
+
+/* Vision & Motto section - h3 heading */
+.vision h3 {
+  font-family: 'Shantell Sans';
+  color: white;
+  font-size: 3em;
+  font-weight: 900;
+  text-align: center;
+}
+
+/* Vision & Motto section - paragraph element */
+.vision p {
+  color: #83af9b;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Vision & Motto section - padding between Vision & Motto */
+.vision_motto {
+  padding-bottom: 7%;
+}
+
+/* ------------------ Login Page --------------------*/
+
+.login_card {
+  background-color: ;
+}
+
+.login_page h1 {
+  font-family: 'Shantell Sans';
+  color: white;
+  font-weight: 900;
+  text-align: left;
+}
+
+/* ------------------ NCERT Page --------------------*/
+
+/* Second Layer from Top - with section heading */
+.subject_layer_1 {
+  padding: 2% 5% 0% 5%;
+  color: #F5EA5A;
+  background-color: #F1E4C3;
+}
+
+/* Subject Element - taking left half of the first row*/
+.subject h1 {
+  font-family: 'Shantell Sans';
+  font-size: 50px;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 2%;
+  padding-right: 5%;
+}
+
+/* styling of the word "Class" */
+.class_heading_text {
+  color: #16FF00;
+  font-size: 25px;
+}
+
+/* styling the word "Chapter List" in the second layer of Aptitude / Other Chapter Pages */
+.Chapter_List_Button {
+  background-color: #F1E4C3;
+  border: #F1E4C3;
+  color: #F9F5EB;
+}
+
+
+/* Element mentioning about Classes - taking right half of the first row */
+.classes {
+  text-align: center;
+}
+
+/* second row of the Subject layer i.e. 2nd layer from the Top */
+.sub_elements_of_subjects {
+  text-align: center;
+ }
+
+/* styling the main display area i.e 3rd layer from the Top */
+.subject_main_area {
+  background-color: #C6A969;
+  padding: 2% 3%;
+  min-height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.subject_main_area h3 button {
+    text-align: center;
+}
+
+#test {
+    text-align: left;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+/* class buttons on NCERT page */
+.ncert_class_buttons {
+  background-color:#F1E4C3;
+  color: white;
+  border: #F1E4C3;
+  font-size: 30px;
+  padding: 2% 2%;
+  margin: 0px 10px;
+  text-decoration: underline;
+}
+
+/* setting the width (appearance) of the classes & sub_category elements  */
+.width_form {
+  display: inline-block;
+}
+
+ /* styling the sub_category elements i.e. Videos, Test, etc */
+.ncert_sub_category_buttons {
+  background-color: #F1E4C3;
+  border: #F1E4C3;
+  color: #205E61;
+  font-family: 'IBM Plex Mono';
+  font-size: 20px;
+  margin-right: 5%;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* styling the chapter names */
+.ncert_chapter_names {
+  background-color:#C6A969;
+  border: #C6A969;
+  color: #fff;
+  display: inline-block;
+  font-family: 'Shantell Sans';
+  margin: 0%;
+  padding: 1% 0.5%;
+  text-align: center;
+}
+
+/* ncert videos styling */
+.ncert_videos {
+  text-align: center;
+  padding: 2% 3%;
+  width: 430px;
+  height: 320px;
+  border-radius: 10%;
+  margin: 0 auto;
+}
+
+/* styling of Titles of the Revision Notes, that are displayed */
+.note_title {
+  color: #F9DBBB;
+  font-family:'Shantell Sans';
+  text-align: left;
+}
+
+/* styling Content of the Revision Notes, that are displayed */
+.note_note {
+  color: white;
+  text-align: left;
+  padding-bottom: 2%;
+
+}
+
+/* horizontal line between Notes that are displayed and for adding new Notes */
+hr {
+  color: #B3E5BE;
+  width: 100%;
+  border: 1px solid;
+}
+
+/* styling input area heading of Adding Note */
+.adding_note{
+color: #40513B;
+size: 25px;
+font-weight: 600;
+
+}
+
+/* styling Delete & Share Note buttons on Note Tab */
+.notes_button {
+  margin:1% 1%;
+}
+
+.note_action_detail span{
+  font-size:25px;
+}
+
+.note_action_detail p{
+  margin-left:3%;
+}
+
+/* styling the heading Select Note(s) */
+.note_Select_Note {
+  color: #00FFF6;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/* styling the Chapter Name on ncert Videos, Test, Performance & Revision-Notes pages  */
+.chapter_name_heading {
+  color: #FDF7C3;
+  font-family: "Shantell Sans";
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  padding: 1% 0%;
+}
+
+/* styling Test Number Buttons */
+.test_buttons {
+  border-color: #C6A969;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+}
+
+
+/* ------------------ Note Page --------------------*/
+
+/* styling 1st layer on Notes page, below Navbar */
+.note_layer_1 {
+  padding: 2% 2%;
+  text-align: centre;
+  background-color: #C6A969;
+}
+
+/* styling h2 heading of 1st layer */
+.note_page_heading {
+  color: white;
+  font-family: "Shantell Sans";
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+  padding: 1% 0%;
+}
+
+/* styling card folder class - folder icon cards & button icons */
+.card_folder {
+  background-color: #C6A969;
+  border: 0px;
+  margin: 0% auto;
+  text-align: center;
+}
+
+.card_folder h5 {
+  color: #FEFAE0;
+  font-family: "Merriweather";
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card_folder i{
+  color: #F7C04A;
+}
+
+.card_folder p{
+  color: white;
+  font-family: "IBM Plex Mono";
+  text-align: center;
+}
+
+/* styling folders into a row */
+.card_row {
+  text-align: center;
+  margin: 0% auto;
+}
+
+
+/* styling 2nd layer, below Navbar, on Notes page */
+.note_layer_2 {
+  background-color: #C6A969;
+  color: white;
+  padding: 1% 5%;
+}
+
+/* styling h4 (message) element on Notes folder page */
+.note_layer_2 h4{
+  color: #16FF00;
+  text-align: center;
+}
+
+.test_layer_1 {
+  background-color: #C6A969;
+  padding: 1% 3%;
+}
+/* styling of test Layer - Subject & class / topic */
+.test_layer_1 h1{
+  color: #DDFFBB;
+  font-family: "Kalam";
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+/* styling test layer heading - 2nd layer from top   */
+.test_layer_1 h4{
+  color: #E9EDC9;
+  font-family: "Kalam";
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.test_layer_2 {
+  background-color: #C6A969;
+  padding: 2% 5%;
+  color: white;
+}
+
+/* styling test layer */
+.question {
+font-family: "Meriweather";
+padding: 1% 0%;
+}
+
+.question_option {
+  font-family: "Meriweather";
+  padding: 0.25% 0%;
+  }
+
+/* styling buttons on question page - Next, Previous, Submit */
+.question_buttons {
+  padding: 1% 0%;
+  text-align: left;
+}
+
+.question_buttons button{
+  margin: 2%;
+  text-align: left;
+}
+
+
+/* ------------------ Footer Element --------------------*/
+
+/* footer element */
+.footer {
+  background-color: #597E52;
+  font-weight: 100;
+  /* font-style: italic; */
+  color: #fff;
+  text-align: center;
+  padding: 2% 5% 2% 0%;
+}
+
+
+
+
+
+/* .brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 70px;
+  text-transform: uppercase;
+  font-size: 1.4em;
+} */
+
+
